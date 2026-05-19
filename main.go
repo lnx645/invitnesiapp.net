@@ -25,7 +25,9 @@ func main() {
 	app := fiber.New(*fiberConfig)
 
 	middleware.FiberMiddleware(app)
+	routes.MainRoute(app)
 	routes.AuthRoute(app)
 	routes.InitPublicDirectory(app, publicDIR)
-	log.Fatal(app.Listen(":8081"))
+
+	log.Fatal(app.Listen(":9000"))
 }

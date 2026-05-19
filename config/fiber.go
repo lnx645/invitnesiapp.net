@@ -7,10 +7,12 @@ import (
 	"github.com/gofiber/template/html/v3"
 )
 
+type AppCtx = fiber.Ctx
 type structValidator struct {
 	validate *validator.Validate
 }
 
+// validate
 func (c *structValidator) Validate(out any) error {
 	return c.validate.Struct(out)
 }

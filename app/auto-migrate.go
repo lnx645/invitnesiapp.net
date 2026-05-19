@@ -6,6 +6,5 @@ import (
 )
 
 func RunAutoMigrate() {
-	lib.DB.AutoMigrate(&models.UserSession{})
-	lib.DB.AutoMigrate(&models.Users{})
+	lib.DB.AutoMigrate(&models.User{}, &models.UserSession{})
 }
