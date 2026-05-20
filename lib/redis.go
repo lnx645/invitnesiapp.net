@@ -11,7 +11,8 @@ import (
 
 var RedisClient *redis.Client
 
-func InitRedisClient(cfg *config.Redis) {
+// InitRedisClient initializes the Redis client with the provided configuration.
+func InitRedisClient(cfg *config.Redis) error {
 	dat, err := strconv.Atoi(cfg.DB)
 	if err != nil {
 		panic(err)
@@ -24,8 +25,5 @@ func InitRedisClient(cfg *config.Redis) {
 
 	context := context.Background()
 	_, err = RedisClient.Ping(context).Result()
-	if err != nil {
-		panic("Redis Server Tidak Aktif")
-	}
-	fmt.Println("✅ Berhasil terhubung ke Memurai!")
+	return err
 }
