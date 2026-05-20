@@ -3,7 +3,7 @@ package lib
 import (
 	"context"
 	"fmt"
-	"invitnesia/api/config"
+	"invitnesia/api/app/config"
 	"strconv"
 
 	"github.com/redis/go-redis/v9"

@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"invitnesia/api/lib"
+	"invitnesia/api/app/lib"
 
 	"github.com/gofiber/fiber/v3"
 )

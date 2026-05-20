@@ -1,8 +1,8 @@
 package app
 
 import (
-	"invitnesia/api/lib"
-	"invitnesia/api/models"
+	"invitnesia/api/app/lib"
+	"invitnesia/api/app/models"
 )
 
 func RunAutoMigrate() {

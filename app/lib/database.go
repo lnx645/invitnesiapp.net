@@ -2,7 +2,7 @@ package lib
 
 import (
 	"fmt"
-	"invitnesia/api/config"
+	"invitnesia/api/app/config"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

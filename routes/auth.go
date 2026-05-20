@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"invitnesia/api/controllers"
-	"invitnesia/api/lib"
-	"invitnesia/api/middleware"
+	"invitnesia/api/app/controllers"
+	"invitnesia/api/app/lib"
+	"invitnesia/api/app/middleware"
 
 	"github.com/gofiber/fiber/v3"
 )

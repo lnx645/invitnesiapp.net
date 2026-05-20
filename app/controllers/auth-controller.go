@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"fmt"
-	"invitnesia/api/lib"
-	"invitnesia/api/models"
+	"invitnesia/api/app/lib"
+	"invitnesia/api/app/models"
 
 	"github.com/gofiber/fiber/v3"
 	"gorm.io/gorm"

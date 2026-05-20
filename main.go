@@ -3,9 +3,9 @@ package main
 import (
 	"embed"
 	"invitnesia/api/app"
-	"invitnesia/api/config"
-	"invitnesia/api/lib"
-	"invitnesia/api/middleware"
+	"invitnesia/api/app/config"
+	"invitnesia/api/app/lib"
+	"invitnesia/api/app/middleware"
 	"invitnesia/api/routes"
 	"log"
 	"os"
