@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"fmt"
+	"invitnesia/api/lib"
 	"invitnesia/api/models"
 
 	"github.com/gofiber/fiber/v3"
@@ -17,6 +19,8 @@ func CreateAuthController() {
 
 func (c *AuthController) Login(ctx fiber.Ctx) error {
 	var product []models.User
+	data := lib.RedisClient.Get(ctx.Context(), "auth:name").Val()
+	fmt.Println(data)
 	err := c.DB.Model(&models.User{}).Preload("Sessions").Find(&product).Error
 	if err != nil {
 		return err

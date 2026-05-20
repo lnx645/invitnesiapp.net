@@ -16,7 +16,10 @@ import (
 var publicDIR embed.FS
 
 func main() {
+	//database init
 	err := lib.InitDBConnection(&config.Get().Database)
+	//redis init
+	lib.InitRedisClient(&config.Get().Redis)
 	if err != nil {
 		panic(err.Error())
 	}

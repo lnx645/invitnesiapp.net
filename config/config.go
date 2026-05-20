@@ -7,6 +7,12 @@ import (
 	"github.com/joho/godotenv"
 )
 
+type Redis struct {
+	Host     string
+	Port     string
+	Password string
+	DB       string
+}
 type Database struct {
 	Host   string
 	User   string
@@ -17,6 +23,7 @@ type Database struct {
 
 type Config struct {
 	Database Database
+	Redis    Redis
 }
 
 func Get() *Config {
@@ -31,6 +38,12 @@ func Get() *Config {
 			User:   os.Getenv("DB_USER"),
 			DbName: os.Getenv("DB_NAME"),
 			Port:   os.Getenv("DB_PORT"),
+		},
+		Redis: Redis{
+			Host:     os.Getenv("REDIS_HOST"),
+			Port:     os.Getenv("REDIS_PORT"),
+			DB:       os.Getenv("REDIS_DB"),
+			Password: os.Getenv("REDIS_PASSWORD"),
 		},
 	}
 }
