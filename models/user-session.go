@@ -2,12 +2,10 @@ package models
 
 import (
 	"time"
-
-	"gorm.io/gorm"
 )
 
 type UserSession struct {
-	gorm.Model
+	BaseModel
 	UserID    uint      `gorm:"index;not null" json:"user_id"`
 	Token     string    `gorm:"unique;not null;size:225" json:"token"`
 	ExpiredAt time.Time `gorm:"index" json:"expired_at"`

@@ -17,4 +17,5 @@ func FiberMiddleware(app *fiber.App) {
 		TimeFormat: "02-Jan-2006",
 		TimeZone:   "Asia/Jakarta",
 	}))
+
 }

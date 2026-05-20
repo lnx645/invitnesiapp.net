@@ -28,6 +28,9 @@ func main() {
 	routes.MainRoute(app)
 	routes.AuthRoute(app)
 	routes.InitPublicDirectory(app, publicDIR)
-
-	log.Fatal(app.Listen(":9000"))
+	app.Use(func(ctx fiber.Ctx) error {
+		ctx.SendStatus(fiber.StatusNotFound)
+		return ctx.Render("404", fiber.Map{})
+	})
+	log.Fatal(app.Listen(":8080"))
 }
