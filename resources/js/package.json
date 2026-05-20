@@ -10,7 +10,9 @@
 		"postinstall": "sv-router"
 	},
 	"dependencies": {
-		"sv-router": "latest"
+		"@tailwindcss/vite": "^4.3.0",
+		"sv-router": "latest",
+		"tailwindcss": "^4.3.0"
 	},
 	"devDependencies": {
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
