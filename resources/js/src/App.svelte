@@ -1,9 +1,5 @@
 <script lang="ts">
 	import { Router } from 'sv-router';
-	import { p } from './router';
+	import { p } from 'sv-router/generated';
 </script>
-
-<a href={p('/')}>Home</a>
-<a href={p('/about')}>About</a>
-
-<Router base="/app"/>
+<Router base="/app" />

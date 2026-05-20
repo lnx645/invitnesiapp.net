@@ -1,2 +1,3 @@
 <script lang="ts"></script>
-<h2>Woke</h2>
+
+<h2>Oke</h2>
